@@ -46,8 +46,9 @@ public class Controller {
             }
             if ((result = scanner.nextInt()) <= lowBorder || result >= highBorder) {
                 view.showMessage(errorMessage);
-            } else
+            } else {
                 break;
+            }
         }
         return result;
     }
