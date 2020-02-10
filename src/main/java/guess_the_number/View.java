@@ -1,4 +1,4 @@
-package GuessTheNumber;
+package guess_the_number;
 
 public class View {
     public static final String START_MESSAGE = "Try to guess a number between 0 and 100.";

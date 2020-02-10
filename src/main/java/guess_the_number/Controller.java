@@ -1,4 +1,4 @@
-package GuessTheNumber;
+package guess_the_number;
 
 import java.util.Scanner;
 
