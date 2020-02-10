@@ -36,9 +36,11 @@ public class Model {
     }
 
     public void setBorderRange(int enteredNumber) {
-        if (enteredNumber > generatedNumber)
+        if (enteredNumber > generatedNumber){
             highBorder = enteredNumber;
-        else
+        }
+        else{
             lowBorder = enteredNumber;
+        }
     }
 }
