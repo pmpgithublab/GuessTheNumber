@@ -25,7 +25,11 @@ public class Controller {
         while ((enteredNumber = getInputNumber(scanner)) != model.getGeneratedNumber()) {
             model.setBorderRange(enteredNumber);
             model.addTriedNumber(enteredNumber);
-            view.showMessage(View.WRONG_TRY + model.getLowBorder() + " - " + model.getHighBorder() + "[");
+            view.showMessage(view.concatenationStrings(View.WRONG_TRY,
+                    String.valueOf(model.getLowBorder()),
+                    View.SPACE_SIGN,
+                    String.valueOf(model.getHighBorder()),
+                    View.CLOSING_BRACKET));
         }
         model.addTriedNumber(enteredNumber);
         view.showMessage(View.YOU_WIN_MESSAGE);
@@ -37,7 +41,11 @@ public class Controller {
     public int getInputNumber(Scanner scanner) {
         int lowBorder = model.getLowBorder();
         int highBorder = model.getHighBorder();
-        String errorMessage = View.WRONG_TRY + lowBorder + " - " + highBorder + "[";
+        String errorMessage = view.concatenationStrings(View.WRONG_TRY,
+                String.valueOf(lowBorder),
+                View.SPACE_SIGN,
+                String.valueOf(highBorder),
+                View.CLOSING_BRACKET);
         int result;
         while (true) {
             while (!scanner.hasNextInt()) {
